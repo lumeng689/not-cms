@@ -15,6 +15,48 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: Login
+  },
+  {
+    path: '/admin',
+    component: resolve => require(['@/views/AdminLayout'], resolve),
+    children: [
+      {path: '', redirect: {path: '/admin/dashboard'}},
+      {
+        path: 'dashboard',
+        name: 'Dashboard',
+        component: resolve => require(['@/views/dashboard/Dashboard'], resolve)
+      },
+      {
+        path: 'operators',
+        name: 'Operators',
+        component: resolve => require(['@/views/sys/Operators'], resolve)
+      },
+      {
+        path: 'groups',
+        name: 'Groups',
+        component: resolve => require(['@/views/sys/Groups'], resolve)
+      },
+      {
+        path: 'ads',
+        name: 'Ads',
+        component: resolve => require(['@/views/sys/Advertises'], resolve)
+      },
+      {
+        path: 'files',
+        name: 'Files',
+        component: resolve => require(['@/views/sys/Files'], resolve)
+      },
+      {
+        path: 'backup',
+        name: 'Backup',
+        component: resolve => require(['@/views/sys/Backup'], resolve)
+      },
+      {
+        path: 'logs',
+        name: 'Logs',
+        component: resolve => require(['@/views/sys/Logs'], resolve)
+      }
+    ]
   }
 ]
 

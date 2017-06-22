@@ -16,7 +16,7 @@ const SETTINGS = {
   MONGODB_USERNAME: 'ngem',
   MONGODB_PASSWORD: 'cms_db',
   // 文件上传目录设置
-  UPLOAD_PATH: '/opt/files/cms/',
+  UPLOAD_PATH: '/opt/files/cms/'
 }
 
 export default SETTINGS

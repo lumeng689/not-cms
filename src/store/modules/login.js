@@ -1,4 +1,4 @@
-import {USER_SIGNIN, USER_SIGNOUT, USER_REG} from '../types'
+import {USER_SIGNIN, USER_SIGNOUT, USER_REG} from '../mutation-types'
 
 var isLoggedIn = function () {
   var token = localStorage.getItem('user')

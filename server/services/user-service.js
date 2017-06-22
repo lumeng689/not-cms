@@ -1,5 +1,3 @@
-var Q = require('q')
-var request = require('request')
 
 export default {
   login: (username, password, cb) => {

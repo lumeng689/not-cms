@@ -3,7 +3,7 @@
     <h3 class="box-title" slot="header" style="width: 100%;">
       <el-row style="width: 100%;">
         <el-col :span="12">
-          <router-link :to="{ path: 'userAdd'}">
+          <router-link to="/admin/operators/add">
             <el-button type="primary" icon="plus">新增</el-button>
           </router-link>
         </el-col>
@@ -57,8 +57,6 @@
               @click="handleEdit(scope.$index, scope.row)">编辑
 
 
-
-
             </el-button>
             <el-button
               size="small"
@@ -69,11 +67,15 @@
 
 
 
+
+
             </el-button>
             <el-button
               size="small"
               type="danger"
               @click="handleDelete(scope.$index, scope.row)">删除
+
+
 
 
 
@@ -96,8 +98,6 @@
   </panel>
 </template>
 <script>
-  import Panel from '@/components/Panel.vue'
-
   export default {
     data () {
       return {
@@ -177,7 +177,6 @@
       }
     },
     components: {
-      Panel
     },
     filters: {}
   }

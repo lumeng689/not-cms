@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/views/Hello'
+import OnlyRouter from '@/views/OnlyRouter'
 import Login from '@/views/Login'
 
 Vue.use(Router)
@@ -28,8 +29,19 @@ const routes = [
       },
       {
         path: 'operators',
-        name: 'Operators',
-        component: resolve => require(['@/views/sys/Operators'], resolve)
+        component: OnlyRouter,
+        children: [
+          {
+            path: '',
+            name: 'Operators',
+            component: resolve => require(['@/views/sys/Operators'], resolve)
+          },
+          {
+            path: 'add',
+            name: 'OperatorForm',
+            component: resolve => require(['@/views/sys/OperatorForm'], resolve)
+          }
+        ]
       },
       {
         path: 'groups',

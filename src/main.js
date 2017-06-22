@@ -4,6 +4,7 @@ import Vue from 'vue'
 import ElementUI from 'element-ui'
 import VueProgressBar from 'vue-progressbar'
 import 'element-ui/lib/theme-default/index.css'
+import Panel from '@/components/Panel.vue'
 import App from './App'
 
 import store from './store'
@@ -27,6 +28,8 @@ const options = {
 }
 
 Vue.use(VueProgressBar, options)
+
+Vue.component('panel', Panel)
 
 /* eslint-disable no-new */
 new Vue({
